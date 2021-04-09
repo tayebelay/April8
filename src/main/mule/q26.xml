@@ -11,7 +11,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<http:request-connection host="localhost" port="8081" connectionIdleTimeout="150000000"/>
 	</http:request-config>
 	<flow name="q26Flow" doc:id="cf36a83a-3f33-47b7-985c-72744e585b0a" >
-		<http:listener doc:name="Listener" doc:id="f1dd8b2f-4bbf-4cb7-a9b0-a0819511e464" config-ref="HTTP_Listener_config" path="/paino" allowedMethods="GET"/>
+		<http:listener doc:name="Listener" doc:id="f1dd8b2f-4bbf-4cb7-a9b0-a0819511e464" config-ref="HTTP_Listener_config" path="/painos" allowedMethods="GET"/>
 		<set-payload value='#["pianoPidigree"]' doc:name="Set Payload" doc:id="03064eff-37f1-4620-88d5-5a2d46846051" />
 		<set-variable value='producer' doc:name="producer" doc:id="2e733a8b-150c-4203-a3d9-b3c4824b24ae" variableName="pianoPidigree"/>
 		<http:request method="POST" doc:name="Request" doc:id="c7f383fb-41d6-4206-8e32-b6cfd239256a" config-ref="HTTP_Request_configuration" path="/child"/>
